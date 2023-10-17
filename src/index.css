@@ -2,26 +2,94 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: poppins;
+  src: url(../public/font-family/Poppins-Medium.ttf);
+}
+@font-face {
+  font-family: poppins-bold;
+  src: url(../public/font-family/Poppins-bold.ttf);
+}
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #ffffff;
+  background-color: #111;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --main-color: #ffb700;
 }
 
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: poppins,sans-serif;
 }
 
-.main-color {
-  background: #ffb400;
+.blue-block {
+  position: fixed;
+  background: var(--main-color);
+  height: 200%;
+  width: 100%;
+  transform: rotate(-15deg);
+  left: -83%;
+  top: -50%;
+}
+
+.bg-image {
+  background-image: url("./assets/SimonProfil.jpg");
+  background-size: cover;
+  background-position: top;
+  height: calc(100vh - 80px);
+  width: 500px;
+  border-radius: 25px;
+  box-shadow: 0 0 7px #111;
+}
+
+.bio {
+  font-family: poppins-bold;
+  font-size: 51px;
+  line-height: 3.75rem;
+  color: var(--main-color);
+}
+
+.bio::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 29px;
+  height: 4px;
+  width: 40px;
+  border-radius: 10px;
+  background: var(--main-color);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  border: 1px solid var(--main-color);
+  border-radius: 50px;
+
+  font-family: poppins-bold;
+  text-transform: uppercase;
+}
+
+.button-arrow-icon {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* padding: 16px 70px 16px 35px; */
+  /* font-size: 15px; */
+  width: 55px;
+  height: 55px;
+  background: var(--main-color);
+  border-radius: 50%;
+  font-weight: 600;
 }

@@ -1,5 +1,56 @@
+/* eslint-disable react/no-unescaped-entities */
+/**
+ * The external imports
+ */
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+
+
+/**
+ * The internal imports
+ */
+
+
 export default function Home() {
   return (
-    <div>Home</div>
-  )
+    <>
+      <div className="">
+        <div className="blue-block"></div>
+        <div className="grid grid-cols-2">
+          <div className="fixed left-10 top-10">
+            <div className="bg-image"></div>
+          </div>
+          <div className="fixed ml-[48%] top-[18%]">
+            <div className="w-2/3">
+              <h1 className="bio flex flex-col uppercase ml-16">
+                <font>je m'appelle</font>
+                <font>simon despres .</font>
+                <font className="text-white">concepteur de</font>
+                <font className="text-white">sites web</font>
+              </h1>
+              <p className="my-4 leading-8">
+                Je suis concepteur Web ainsi que développeur front-end basé à la
+                frontière Franco-Suisse. Je suis passioné par la création
+                d'interface utilisateur intéractive et dynamique qui captivera
+                vos visiteurs dès les premières secondes.
+              </p>
+              <button className="button">
+                <Link to="/about">
+                  <span className="pl-10">plus à propos de moi</span>
+                  <span>
+                    <FontAwesomeIcon
+                      icon={faArrowRight}
+                      className="button-arrow-icon"
+                    />
+                  </span>
+                </Link>
+              </button>
+            </div>
+          </div>
+        </div>
+        <button className="absolute right-5 top-5"></button>
+      </div>
+    </>
+  );
 }
