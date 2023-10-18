@@ -45,7 +45,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <Navbar />
+          {/* <Navbar /> */}
         </div>
       </div>
     </>

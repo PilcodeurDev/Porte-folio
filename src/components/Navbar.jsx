@@ -2,7 +2,7 @@
 /**
  * The external imports
  */
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHouse,
@@ -18,7 +18,7 @@ import {
 const pagesArray = [
   {
     id: 1,
-    path: "/home",
+    path: "/",
     text: "Acceuil",
     icon: faHouse,
   },
@@ -53,11 +53,19 @@ function Navbar() {
     <div className="nav">
       <ul className="icon-menu">
         {pagesArray.map((page) => (
-          <li className="icon-box" key={page.id}>
-            <Link to={page.path} className="flex justify-center items-center">
+          <li key={page.id} className="icon-box">
+            <NavLink
+              to={page.path}
+              className={({ isActive }) =>
+                `${
+                  isActive &&
+                  "bg-[#ffb700] h-full w-full rounded-full flex items-center justify-center"
+                }`
+              }
+            >
               <FontAwesomeIcon icon={page.icon} className="text-lg" />
               <h2>{page.text}</h2>
-            </Link>
+            </NavLink>
           </li>
         ))}
       </ul>
