@@ -16,12 +16,12 @@ export default function Home() {
   return (
     <>
       <div className="">
-        <div className="blue-block"></div>
+        <div className="block"></div>
         <div className="grid grid-cols-2">
           <div className="fixed left-10 top-10">
             <div className="bg-image"></div>
           </div>
-          <div className="fixed ml-[48%] top-[18%]">
+          <div className="fixed ml-[48%] top-[%]">
             <div className="w-2/3">
               <h1 className="bio flex flex-col uppercase ml-16">
                 <font>je m'appelle</font>
@@ -35,17 +35,14 @@ export default function Home() {
                 d'interface utilisateur intéractive et dynamique qui captivera
                 vos visiteurs dès les premières secondes.
               </p>
-              <button className="button">
-                <Link to="/about">
-                  <span className="pl-10">plus à propos de moi</span>
-                  <span>
-                    <FontAwesomeIcon
-                      icon={faArrowRight}
-                      className="button-arrow-icon"
-                    />
-                  </span>
-                </Link>
-              </button>
+              <Link to="/about" className="button">
+                <span className="pl-7 pr-5 py-3">plus à propos de moi</span>
+                <span className="button-arrow-icon">
+                  <FontAwesomeIcon
+                    icon={faArrowRight}
+                  />
+                </span>
+              </Link>
             </div>
           </div>
         </div>
