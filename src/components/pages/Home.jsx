@@ -6,17 +6,17 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-
 /**
  * The internal imports
- */
+*/
+import Navbar from "../Navbar";
 
 
 export default function Home() {
   return (
     <>
       <div className="">
-        <div className="blue-block"></div>
+        <div className="block"></div>
         <div className="grid grid-cols-2">
           <div className="fixed left-10 top-10">
             <div className="bg-image"></div>
@@ -35,21 +35,18 @@ export default function Home() {
                 d'interface utilisateur intéractive et dynamique qui captivera
                 vos visiteurs dès les premières secondes.
               </p>
-              <button className="button">
-                <Link to="/about">
-                  <span className="pl-10">plus à propos de moi</span>
-                  <span>
-                    <FontAwesomeIcon
-                      icon={faArrowRight}
-                      className="button-arrow-icon"
-                    />
-                  </span>
-                </Link>
-              </button>
+              <Link to="/about" className="button">
+                <span className="pl-7 pr-5 py-3">plus à propos de moi</span>
+                <span className="button-arrow-icon">
+                  <FontAwesomeIcon
+                    icon={faArrowRight}
+                  />
+                </span>
+              </Link>
             </div>
           </div>
+          <Navbar />
         </div>
-        <button className="absolute right-5 top-5"></button>
       </div>
     </>
   );

@@ -32,7 +32,7 @@ body {
   font-family: poppins,sans-serif;
 }
 
-.blue-block {
+.block {
   position: fixed;
   background: var(--main-color);
   height: 200%;
@@ -50,6 +50,7 @@ body {
   width: 500px;
   border-radius: 25px;
   box-shadow: 0 0 7px #111;
+  display: block !important;
 }
 
 .bio {
@@ -63,9 +64,9 @@ body {
   content: "";
   position: absolute;
   left: 0;
-  top: 29px;
+  top: 27px;
   height: 4px;
-  width: 40px;
+  width: 35px;
   border-radius: 10px;
   background: var(--main-color);
 }
@@ -73,23 +74,104 @@ body {
 .button {
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
+  justify-content: space-between;
+  width: 270px;
   border: 1px solid var(--main-color);
   border-radius: 50px;
-
+  background: transparent;
   font-family: poppins-bold;
+  font-size: 15px;
   text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--main-color);
+  z-index: -1;
+  transform: translateX(100%);
+  transition: all 0.5s;
+  transition-timing-function: cubic-bezier(.5, 1.6, .4, .7);
+}
+.button:hover::before{
+  transform: translateX(0%);
 }
 
 .button-arrow-icon {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  /* padding: 16px 70px 16px 35px; */
-  /* font-size: 15px; */
-  width: 55px;
-  height: 55px;
+  position: relative;
+  right: -1px;
+  width: 48px;
+  height: 48px;
   background: var(--main-color);
   border-radius: 50%;
-  font-weight: 600;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  position: fixed;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  top: 50%;
+  transform: translateY(-50%);
+  /* opacity: 1; */
+
+}
+
+.icon-box{
+  width: 50px;
+  height: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  border-radius: 50%;
+  background-color: #2B2A2A;
+  cursor: pointer;
+  transition: .4s;
+  /* list-style: none; */
+}
+
+.icon-box:hover {
+  background-color: var(--main-color);
+}
+
+.icon-box a {
+  /* position: absolute; */
+}
+
+.icon-box h2 {
+  margin: 0;
+  padding: 0 25px 0 30px;
+  height: 50px;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  white-space: nowrap;
+  opacity: 0;
+  line-height: 50px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  transition: all .3s;
+  font-weight: 500;
+}
+
+.icon-box:hover h2, .icon-box h2:hover {
+    opacity: 1;
+    right: 27px;
+    margin: 0;
+    text-align: center;
+    border-radius: 30px 0 0 30px;
+    background: var(--main-color);
 }
