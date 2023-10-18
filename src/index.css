@@ -136,7 +136,7 @@ body {
   justify-content: center;
   margin: 20px 0;
   border-radius: 50%;
-  background-color: #2B2A2A;
+  background: #2B2A2A;
   cursor: pointer;
   transition: .4s;
   /* list-style: none; */
@@ -144,10 +144,6 @@ body {
 
 .icon-box:hover {
   background-color: var(--main-color);
-}
-
-.icon-box a {
-  /* position: absolute; */
 }
 
 .icon-box h2 {
