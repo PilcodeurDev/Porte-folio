@@ -6,10 +6,10 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-
 /**
  * The internal imports
- */
+*/
+import Navbar from "../Navbar";
 
 
 export default function Home() {
@@ -45,8 +45,8 @@ export default function Home() {
               </Link>
             </div>
           </div>
+          <Navbar />
         </div>
-        <button className="absolute right-5 top-5"></button>
       </div>
     </>
   );
