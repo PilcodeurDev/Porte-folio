@@ -21,7 +21,7 @@ export default function Home() {
           <div className="fixed left-10 top-10">
             <div className="bg-image"></div>
           </div>
-          <div className="fixed ml-[48%] top-[%]">
+          <div className="fixed ml-[48%] top-[18%]">
             <div className="w-2/3">
               <h1 className="bio flex flex-col uppercase ml-16">
                 <font>je m'appelle</font>
