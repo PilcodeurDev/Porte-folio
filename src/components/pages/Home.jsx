@@ -6,12 +6,6 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-/**
- * The internal imports
-*/
-import Navbar from "../Navbar";
-
-
 export default function Home() {
   return (
     <>
@@ -23,7 +17,7 @@ export default function Home() {
           </div>
           <div className="fixed ml-[48%] top-[18%]">
             <div className="w-2/3">
-              <h1 className="bio flex flex-col uppercase ml-16">
+              <h1 className="bio flex flex-col ml-16">
                 <font>je m'appelle</font>
                 <font>simon despres .</font>
                 <font className="text-white">concepteur de</font>
@@ -36,7 +30,7 @@ export default function Home() {
                 vos visiteurs dès les premières secondes.
               </p>
               <Link to="/about" className="button">
-                <span className="pl-7 pr-5 py-3">plus à propos de moi</span>
+                <span className="pl-7 py-3">plus à propos de moi</span>
                 <span className="button-arrow-icon">
                   <FontAwesomeIcon
                     icon={faArrowRight}
