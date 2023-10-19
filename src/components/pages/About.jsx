@@ -97,6 +97,19 @@ export default function About() {
                   </li>
                 ))}
               </ul>
+              <div className="cv pt-4">
+                <a
+                  href={Cv2023}
+                  rel="download"
+                  download={Cv2023}
+                  className="button"
+                >
+                  <span className="pl-7">télécharger cv</span>
+                  <span className="button-arrow-icon">
+                    <FontAwesomeIcon icon={faDownload} />
+                  </span>
+                </a>
+              </div>
             </div>
             <div>diagramme</div>
           </div>
