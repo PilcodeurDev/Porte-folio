@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import Cv2023 from "../../assets/Simon_despres.pdf";
 import { FaWhatsappSquare } from "react-icons/fa";
+import Skill from "../Skill";
 /**
  * The internal imports
  */
@@ -111,11 +112,11 @@ export default function About() {
                 </a>
               </div>
             </div>
-            <div>diagramme</div>
+            <div className=" row">
+              <p className="custom-title">mes compétences </p>
+              <Skill />
+            </div>
           </div>
-        </div>
-        <div>
-          <p>mes compétences </p>
         </div>
       </section>
     </>

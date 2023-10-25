@@ -222,3 +222,42 @@ body {
 .cv span svg{
   font-size: 16px;
 }
+
+.c100{
+  position: relative;
+  background-color: #2B2A2A;
+  /* font-size: 120px; */
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+
+.c100>span {
+  position: absolute;
+  /* display: block; */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slice{
+  position: absolute;
+  width: 80px;
+  height: 80px;
+
+}
+
+.bar {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  transform: rotate(.66turn);
+  background: var(--main-color);
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  /* clip: rect(0,0.5em,1em,0); */
+}
